@@ -93,7 +93,7 @@ $(document).ready(function() {
 				$("#loading").hide();
 				$("#container").show();
 			}, "@1n");
-			click.start("@1n");
+			click.sync().start();
 		}
 		else if (Tone.Transport.state == 'stopped') {
 			console.log('tranposrt has not started yet, cannot show board');
