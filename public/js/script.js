@@ -38,7 +38,6 @@ $(document).ready(function() {
 		"../sound/loop6.mp3",
 		"../sound/loop7.mp3",
 		"../sound/loop8.mp3",
-		"../sound/click.mp3"
 	], function() { // fill sounds[] array with players after all buffers are loaded
 		console.log('all buffers loaded');
 		for (i = 0; i < 8; i++) {
@@ -75,7 +74,6 @@ $(document).ready(function() {
 		//sconsole.log(buffers.loaded);
 		if (files.loaded == true) {
 			startTransport(); // start the transport only when the buffers have loaded
-			click.start("@1n");
 		}
 	});
 
@@ -95,6 +93,7 @@ $(document).ready(function() {
 				$("#loading").hide();
 				$("#container").show();
 			}, "@1n");
+			click.start("@1n");
 		}
 		else if (Tone.Transport.state == 'stopped') {
 			console.log('tranposrt has not started yet, cannot show board');
